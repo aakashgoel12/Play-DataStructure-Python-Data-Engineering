@@ -1,0 +1,6 @@
+# multiply 2 lists
+
+from operator import mul
+l1 = [1,2,3,4,5]
+l2 = [10,20,30,40,50]
+print(list(map(mul,l1,l2)))
