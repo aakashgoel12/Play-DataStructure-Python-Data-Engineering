@@ -25,21 +25,21 @@ def read_data(input_file_path, delimiter=",", skiprows=0):
         return None
 
 ## save either in csv, xlsx, pkl format
-def save_data(data, file_path, encoding='utf-8',index_status=False):
-    filename, file_extension = os.path.splitext(input_file_path)
+def save_data(data, output_file_path, encoding='utf-8',index_status=False):
+    filename, file_extension = os.path.splitext(output_file_path)
     if file_extension == '.csv':
         try:
-            data.to_csv(file_path, encoding=encoding, index=index_status)
+            data.to_csv(output_file_path, encoding=encoding, index=index_status)
         except Exception as e:
             print("Error in saving file: {}".format(e))
     elif file_extension == '.xlsx' or file_extension == '.xls':
         try:
-            data.to_excel(file_path, encoding=encoding, index=index_status)
+            data.to_excel(output_file_path, encoding=encoding, index=index_status)
         except Exception as e:
             print("Error in saving file: {}".format(e))
     elif file_extension == '.pkl' or file_extension == '.pickle'
         try:
-            with open(file_path,'wb') as f:
+            with open(output_file_path,'wb') as f:
                 pickle.dump(data,f)
                 f.close()
         except Exception as e:
