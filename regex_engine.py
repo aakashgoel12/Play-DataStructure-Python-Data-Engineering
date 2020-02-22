@@ -4,6 +4,7 @@ import re
 def generate_regex_kwd_list(kwd_list):
 	pattern_kwd = ''
 	for i in street_list:
+		i = i.strip()
 		if i!='':
 			pattern_kwd+='\\b'+i+'\\b'+'|'
 	pattern_kwd = pattern_kwd.strip('|')
