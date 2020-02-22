@@ -10,9 +10,9 @@ def generate_regex_kwd_list(kwd_list):
 	reg_kwd = re.compile(pattern_kwd,re.I)
 	return reg_kwd
 
-#################################################
+##########################################################
 ## Test Program function: generate_regex_kwd_list
-#################################################
+##########################################################
 
 s =  "my name is aakash goel, part of goels family i love my country India"
 kwd_list = ['india','goel']
